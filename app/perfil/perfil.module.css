@@ -1,0 +1,213 @@
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1em 0;
+    border-radius: 5px;
+    background: #f8f8f8;
+    padding: 0.8em;
+}
+
+.title span{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    background: #f8f8f8;
+    border-radius: 5px;
+    padding: 0.8em;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+}
+
+.labelAvatar{
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.formProfile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    width: 90%;
+}
+
+.formProfile img{
+    margin-bottom: 1em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.formProfile label{
+    margin-bottom: 0.5em;
+    font-size: 1.4em;
+}
+
+.formProfile input, .formProfile textarea, .formProfile select{
+    margin-bottom: 1em;
+    padding: 0.7em;
+    border: 1px solid #121212;
+    border-radius: 5px;
+    max-width: 600px;
+}
+
+.formProfile input:disabled{
+    cursor: not-allowed;
+}
+
+.formProfile button {
+    max-width: 600px;
+    background: #181c2e;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.3rem;
+    height: 35px;
+}
+
+.formProfile button:hover{
+    background: linear-gradient(#195083, #135a86);    
+    color: #fff;
+}
+
+.logoutBtn{
+    padding: 8px 20px;
+    border: 1px solid #121212;
+    background: transparent;
+    border-radius: 5px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.logoutBtn:hover{
+    background: linear-gradient(#b61e1e, #f80000);
+}
+
+
+.content table{
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.content table caption{
+    font-size: 1.5em;
+    margin: 0.5em 0.75em;
+}
+
+.content table tr{
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 0.35em;
+}
+
+.content table th, .content table td{
+    padding: 0.60em;
+    text-align: center;
+}
+
+.content table th{
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.content table td .action{
+    border: 0;
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 3px;
+    opacity: 85%;
+}
+
+.content table td .action:hover{
+    opacity: 100%;
+}
+
+.content table td .action svg{
+    vertical-align: middle;
+}
+
+.content table td .badge{
+    padding: 3px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+
+@media(max-width: 600px){
+    .content table{
+        border: 0;
+    }
+
+    .content table caption {
+        font-size: 1.3em;
+    }
+
+    .content table thead {
+        border: none;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .content table tr{
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 0.60em;
+    }
+
+    .content table td{
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 0.8em;
+        text-align: right;
+    }
+
+    .content table td::before{
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+@media(max-width: 700px){
+    .container{
+        display: flex;
+        background: #f8f8f8;
+        border-radius: 5px;
+        padding: 0.8em;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+    
+    .content {
+        margin: 0 auto;
+        padding: 1px 16px;
+    }
+}
